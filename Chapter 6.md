@@ -125,9 +125,9 @@ CREATE SCHEMA [NAME|
 
 
 ### 6.3.3 Changing a Table Definition
-Add a new column to a table
-Drop a colmn from a table
-Add a new table constraint
-Drop a table constraint
-Set a default for a column
-Drop a default for a column
+Add a new column to a table  
+Drop a colmn from a table  
+Add a new table constraint  
+Drop a table constraint  
+Set a default for a column  
+Drop a default for a column  
