@@ -120,7 +120,7 @@ CREATE SCHEMA [NAME|
 ```
 
 ### 6.3.2 Creating a Table
-![Creating a Table]("./src/6.3.2Creating a Table.png")
+![Creating a Table](https://github.com/sujh2004/Notes/blob/main/src/6.3.2Creating%20a%20Table.png)
 
 
 
