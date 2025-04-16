@@ -120,7 +120,7 @@ CREATE SCHEMA [NAME|
 ```
 
 ### 6.3.2 Creating a Table
-![Creating a Table]("D:\Bupt\2025 Spring\database\src\6.3.2Creating a Table.png")
+![Creating a Table]("./src/6.3.2Creating a Table.png")
 
 
 
