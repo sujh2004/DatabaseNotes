@@ -57,3 +57,37 @@ The overall description of the database is called the database schema.There are 
 数据库的整体描述叫做数据库模式。在数据库中有三种不同的模式：外层模式，概念模式，内部模式
 
 DBMS负责这三类模式之间的映射。每一个外部模式通过外部层到概念层的映射与概念模式相联系。概念模式通过概念层到内部层的映射与内部模式相联系。
+
+数据库中任何特定时间点的数据被称为数据库实例
+
+模式称为数据库的内涵
+实例称为数据库的外延
+
+逻辑数据独立性：外部模式不受概念模式变化的影响
+物理数据独立性：概念模式不受内部模式变化的影响
+
+## 2.2 Database Language
+A data sublanguage consists of two parts: Data Definition Language(DDL) and a Data Manipulation Language(DML)
+
+DDL: A language that allows the DBA or user to describe and name the entities, attributes, and relationships required for application, together with any associated integrity and security constraints. 
+DDL:一个允许DBA或者用户来描述和命名应用程序需要的实体，属性和关系以及任何相关的完整性和安全性约束的语言
+
+DML: A language that provides a set of operations to support the basic data manipulation operations on the data held the database. 
+DML：一个提供一系列操作对数据库中保存的数据进行基础数据操作的语言
+
+## 2.3 Data Models and Conceptual Modeling
+Data model: An integrated collection of concepts for describing and manipulating data, relationships between data, and constraints on data in an organization.
+数据模型：用于描述和操作数据、数据之间的关系以及组织中数据约束的综合概念集合
+
+three components:
+- A structural part
+- A manipulative part
+- A set of integrity rules
+
+三部分：
+结构部分：由一组创建数据库的规则组成
+操纵部分：定义允许对数据进行的操作的种类
+一组完整性约束：确保数据的准确性
+
+
+### 2.3.1 Object-Based Data Models
