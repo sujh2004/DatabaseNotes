@@ -130,4 +130,66 @@ Drop a colmn from a table
 Add a new table constraint  
 Drop a table constraint  
 Set a default for a column  
-Drop a default for a column  
+Drop a default for a column
+
+2025年4月27日 13:00
+ALTER TABLE TabName
+[ADD [COLUMN] columnName dataType]
+
+Continue...
+
+### 6.3.4 Removing a Table
+```
+DROP TABLE TableName[RESTTRICT|CASCADE]
+```
+
+### 6.3.5 Creating an Index
+popose: improve the performance
+```
+CREATE [UNIQUE] INDEX IndexName ON TableName(columnName [ASC|DESC][，...])
+
+DROP INDEX IndexName
+```
+
+请求发送后，DBMS把表中的columnName所有的拿出来，然后在磁盘中找到对应元组的地址，然后建立B+树，在叶子上挂上对应元组的地址
+
+OLAP OLTP
+
+## 6.4 Views
+
+### 6.4.1 Creating a View
+```
+CREATE VIEW ViewName
+            [(newColumnName[,...])]
+            AS subselect [WITH
+            [CASCADED|LOCAL]]CHECK OPTION
+
+DROP VIEW ViewName [RESTRICT|CASCADE]
+```
+
+### 6.4.3 View Resolution
+视图分解
+
+### 6.4.4 Restriction on Views
+- 聚集函数套聚集函数
+- 分组视图从来就不能与基表或视图连接
+
+### 6.4.5 View Updatablity  
+
+### 6.4.6 WITH CHECK OPTION
+
+### 6.4.7 
+让上层程序使用简单
+实用性，安全性
+
+在现实情境下无法真正想基表那样
+
+### 6.4.8 View Materialization
+
+## 6.5 Transactions
+
+## 6.6 Access Control
+授予权限
+
+### 6.6.1 Granting Privileges to Other Users
+是否可以传递
