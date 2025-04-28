@@ -225,7 +225,3 @@ True if and only if there exists at least one row in result table returned by su
     
     DELETE FROM Viewing
     WHERE propertyNo = ‘PG4’;
-
-
-
-
