@@ -89,6 +89,7 @@ three components:
 操纵部分：定义允许对数据进行的操作的种类
 一组完整性约束：确保数据的准确性
 
+2025年4月28日 10:00
 ## 2.3 Data Models and Conceptual Modeling
 **Purpose:**
     To represent data in an understandable
