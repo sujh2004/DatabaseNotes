@@ -89,5 +89,40 @@ three components:
 操纵部分：定义允许对数据进行的操作的种类
 一组完整性约束：确保数据的准确性
 
+## 2.3 Data Models and Conceptual Modeling
+**Purpose:**
+    To represent data in an understandable
+
+**Categories of data models include:**
+- Object-based
+- Record-based
+- Physical
 
 ### 2.3.1 Object-Based Data Models
+- Entity-Relationship
+- Semantic
+- Functional
+- Object-Oriented
+
+### 2.3.2 Record-Based Data Models
+- the relational data model
+- the network data model
+- the hierarchical data model
+
+## 2.4 Function of a DBMS
+- Data Storage,REtrievl,and Update         数据存储，检索和更新
+- A User-Accessible Catalog                用户可访问的目录
+- Transaction Support                      事务支持
+- Concurrency Control Services             并发控制服务
+- Recovery Services                        恢复服务
+- Authorization Services                   授权服务
+- Support for Data Communication           支持数据通信
+- Integrity Services                       完整性服务
+- Services to Promote Data Independence    提升数据独立性的服务
+- Utility Services                         实用服务程序
+
+## 2.7 System Catalogs
+**Objectives:**
+- extensibility of data      数据的可扩展性
+- integrity of data          数据的完整性
+- controlled access to data  受控的数据访问
