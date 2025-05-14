@@ -28,8 +28,8 @@ IS 包括 DA
 
 |概念| 卡  &nbsp;终端(多对多)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓
-|逻辑| 卡  &nbsp;终端 明细(联系的属性而非两个主体的属性)
-|物理| 具体的语句
+|逻辑| 卡  &nbsp;终端 明细(联系的属性而非两个主体的属性) 出表
+|物理| 具体的语句 CREATE TABLE
 
 多对多必须单独弄一个表
 一对多可以通过主外键
@@ -41,3 +41,19 @@ Conceptual database design: The process of constructing a model of the informati
 独立于
 
 若找不到 没有需求则罢，有需求则调整ER(概念)
+
+
+## 7.9 Prototyping(原型)
+通常为实现最终系统所需要具备的所有特性和功能
+快，不断迭代
+
+## 7.10 Implementation
+## 7.12 测试
+## 7.13 运维
+DBA
+
+## 7.14 CASE Tools
+ER符 UML
+不用手搓
+
+## 7.15 DA和DBA 
