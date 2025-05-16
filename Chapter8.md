@@ -80,7 +80,7 @@ Participation：参与性 看最小的数字， 0 or 1 如果是0：可选参与
 复杂联系 单独成表 
 多值属性
 
-![Transform ER into relationhsip]()
+![Transform ER into relationhsip](https://github.com/sujh2004/DatabaseNotes/blob/main/src/8.7TransformERintorelationship.png?raw=true)
 
 
 
