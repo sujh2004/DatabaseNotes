@@ -53,3 +53,12 @@ UNF：有一个或多个重复元组
 1NF: Indicates that if A and B are attributes of a relation, B is fully dependent on A if B is functionally dependent on A, but not on any proper subset of A
 
 2NF：
+谁不让我成为二范式，就把谁删掉，非主键对逐渐的部分依赖
+找到之后，把右边的属性删掉
+
+## 9.7 3NF
+在二范式之后，删除传递
+
+## 9.8 BCNF
+每一个决定因素都是候选键
+
