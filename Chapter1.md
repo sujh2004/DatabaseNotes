@@ -35,15 +35,15 @@ The Database Administrator (DBA) is responsible for the physical realization of 
 
 ## 1.6 Advantages and Disadvantages of DBMSs
 - Advantages:
-    - ontrol of data redundancy
-    - data consistency
-    - Sharing of data
-    - Improved data integrity
-    - Improved security
+    - control of data redundancy 可控的数据冗余
+    - data consistency 数据一致性
+    - Sharing of data 数据共享
+    - Improved data integrity 提升数据完整性
+    - Improved security 提升了安全性
 
 - Disadvantages:
-    - Complexity
-    - Cost of DBMSs
-    - Reduced performance
-    - Higher impact of a failure
+    - Complexity 复杂
+    - Cost of DBMSs 花费更多
+    - Reduced performance 减少了性能
+    - Higher impact of a failure 如果出错，损失更大
     
