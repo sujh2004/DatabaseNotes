@@ -29,7 +29,7 @@ Foreign Key
 实体完整性：在基本关系中，主关键字的属性不能为空。
 
 **Referential Integrity:** If foreign key exists in a relation. either foreign key value must match a candidate key value of some tuple in its home relation or foreign key value must be wholly null.
-引用完整性：如果在关系中存在某个外部关键字，则它的值或与主关系中某个元租的候选关键字取值相同，或者全为空
+引用完整性：如果在关系中存在某个外部关键字，则它的值或与主关系中某个元组的候选关键字取值相同，或者全为空
 
 **Enterprise Constraints:** Additional rules specified by the users or database administrators of a database
 一般性约束：由数据库用户或数据库管理员所指定的附加规则，他约束企业的某些方面
