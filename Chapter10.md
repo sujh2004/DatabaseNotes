@@ -24,9 +24,9 @@ rolled back
 committed transaction cannot be aborted.
 
 Begin Transaction
-    SQL1
-    /0
-    SQL2
+&nbsp;&nbsp;SQL1
+&nbsp;&nbsp;/0
+&nbsp;&nbsp;SQL2
 Commit
 
 diagram
@@ -91,7 +91,7 @@ T1 T2一起来，谁先执行都可以，就是可串行化的
 增长阶段：只加锁不解锁
 收缩阶段：只解锁不加锁
 
-保证了可串行性，
+保证了可串行性，并没有保证可恢复性
 
 严格两个锁协议：所有的释放都要等到commit才释放，
 
@@ -112,6 +112,12 @@ Three general techniques for handling deadlock：
 
 简答题
 
+CC(并发控制协议){
+  锁  悲观的 (来了我就锁) 死锁问题 检测 环状图
+  Timestamp 乐观的 (大部分情况不会发生冲突) 先启动事务>后启动事务
+  MVCC(多版本并发控制) 读-写冲突 保留数据向原始版本在内存，其他事务在读的时候，读的是老版本，在什么时间范围之内，应该让这个事务看到哪一段的版本
+}
+
 ### 10.2.6 粒度
 
 粒度：并发控制协议选择作为保护单位的数据项的大小
@@ -131,9 +137,44 @@ Three general techniques for handling deadlock：
 - Magnetic type
 - Optical disk
 
+数据在磁盘上，数据在内存的缓冲区里(buffer)，事务一提交就落盘就省事了，如果不是怎么保证一致呢
+就说断电，导致内存和磁盘数据不一致，恢复管理就来解决这个问题。主观的客观的硬件的软件的
+
 ### 10.3.2 Transcations and Recovery
 
-buffers   flush
+buffers   flush -> 刷写到磁盘上
 force-writting
 
 如果还没flush到磁盘上 如果还没提交但重启了 必须要undo
+
+commit 断电 redo
+内存缓冲区满了，undo{
+  日志
+}
+
+### 10.3.3 Recovery Facilities
+- 备份:全局备份，增量备份,物理备份，逻辑备份
+- 日志:![alt text](./src/Log.png)
+ 执行之前先写日志
+ 会变得非常庞大，如果重启之后去检查，那么非常累，非常久
+ 所以有所谓的检查点
+- 检查点(CheckPoint):数据库和日志文件的同步点，所有缓冲会被强制写到secondary storage
+  - 所有在main memory的log records写到second storage
+  - 把所有更改完的块写到外存里
+  - 在日志文件里写到一个检查点
+  
+  活跃的事务要写在同一个日志文件
+
+### 10.3.4 Recovery Techniques
+- Deferred Update(延迟更新)
+  - 更新不会被写到数据库直到事务commit
+  - 如果事务commit之前fails，所以不用做任何undo
+  - commit之后可能落盘，也可能没flash，需要做redo
+- Immediate Update
+  - 事务没commit肯定要做undo
+  - commit之后失败 需要做 redo
+- Shadow Paging(影子页)
+  打开Word会有一个隐藏文件，把你修改之前的页留一个快照，如果你修改好了，那我就不要之前的快照了，如果你没修改完故障了，那我就把原来的历史版拿出来。开销比较大
+
+# Chapter11 Query Processing(查询处理)
+更多的是关注于select语句
